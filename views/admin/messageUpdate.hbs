@@ -1,0 +1,44 @@
+<div class="form-container d-flex flex-column">
+  <h4 class="text-center mt-3">Update Exhibition</h4>
+  <form method="post" action="/admin/messages/messageUpdate">
+    <input type="hidden" value="{{message.id_message}}" name="id" />
+
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="name" class="col-1 col-form-label">Name:
+        {{message.name}}</label>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="email" class="col-1 col-form-label">Email:
+        {{message.email}}</label>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label
+        for="message"
+        class="col-1 col-form-label"
+      >Message:{{message.email}} </label>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="answer" class="col-1 col-form-label">Answer</label>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          id="answer"
+          name="answer"
+          value="{{message.answer}}"
+        />
+      </div>
+    </div>
+    <div class="m-3"></div>
+    <div class="text-center">
+      <button
+        type="submit"
+        class="btn btn-secondary col-1 row m-3"
+      >Update</button>
+    </div>
+  </form>
+  {{#if error}}
+    <h5>{{msj}}</h5>
+  {{/if}}
+
+</div>

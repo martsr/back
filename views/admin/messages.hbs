@@ -1,0 +1,54 @@
+<div class="exh-container text-start m-0">
+  <div class="row justify-content-md-start m-0">
+    <div class="col-8 d-flex flex-row mb-3">
+      <div>
+        <h3>Current Messages</h3>
+      </div>
+    </div>
+    <div class="col-4 d-flex flex-row mb-3 justify-content-md-end ">
+        <div>
+      <p class="text-end mt-2 ">Hi {{user}}!
+        </div>
+        <div class="ps-1 mt-1">
+        <a
+          class="btn btn-sm btn-danger "
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+          href="/admin/login/logout"
+        >Sign Out
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a></p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+       <table class="table ms-4 table-hover">
+  <thead>
+    <tr>
+      <th scope="col ">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Message</th>
+      <th scope="col">Answer</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each messages }}
+    <tr>
+      <th scope="row">{{id_message}}</th>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{message}}</td>
+      <td>{{answer}}</td>
+      <td class="text-left ">
+        <a class="btn btn-sm btn-secondary" href="/admin/messages/messageUpdate/{{id_message}}">
+        <i class="fa fa-pencil" aria-hidden="true"></i></a>
+        <a class="btn btn-sm btn-secondary" href="/admin/messages/delete/{{id_message}}">
+        <i class="fa fa-trash" aria-hidden="true"></i></a>
+        </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table> 
+    </div>
+  </div>

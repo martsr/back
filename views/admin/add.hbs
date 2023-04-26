@@ -1,0 +1,63 @@
+<div class="form-container d-flex flex-column">
+  <h4 class="text-center mt-3">Add a New Exhibition</h4>
+  <form
+    action="/admin/exhibitions/add"
+    method="post"
+    enctype="multipart/form-data"
+  >
+
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="inputTitle" class="col-1 col-form-label">Exhibition Title</label>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          id="inputTitle"
+          name="title"
+          placeholder="Philip Guston Now"
+        />
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="inputSubTitle" class="col-1 col-form-label">Exhibition Dates</label>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          id="inputSubTitle"
+          name="subtitle"
+          placeholder="March 2 – August 27, 2023"
+        />
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="inputBody" class="col-1 col-form-label">Exhibition Description</label>
+      <div class="col-2">
+        <textarea
+          type="text"
+          class="form-control"
+          id="inputBody"
+          name="description"
+          placeholder="Description"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label class="col-1 col-form-label">Imagen: </label>
+      <div class="col-2">
+        <input type="file" name="image" id="image" />
+      </div>
+    </div>
+    <div class="m-3"></div>
+    <div class="text-center">
+      <button
+        type="submit"
+        class="btn btn-secondary col-1 row m-3"
+      >Submit</button>
+    </div>
+  </form>
+  {{#if error}}
+    <p>{{message}}</p>
+  {{/if}}
+
+</div>

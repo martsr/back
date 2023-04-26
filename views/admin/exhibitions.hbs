@@ -1,0 +1,61 @@
+<div class="exh-container text-start m-0">
+  <div class="row justify-content-md-start m-0">
+    <div class="col-8 d-flex flex-row mb-3">
+      <div>
+        <h3>Current Exhibitions</h3>
+      </div>
+      <div class="ps-2 pt-1">
+        <a
+          class="btn btn-sm btn-secondary"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+          href="/admin/exhibitions/add"
+        ><i class="fa fa-plus" aria-hidden="true"></i>Add Exhibition</a>
+      </div>
+    </div>
+    <div class="col-4 d-flex flex-row mb-3 justify-content-md-end ">
+        <div>
+      <p class="text-end mt-2 ">Hi {{user}}!
+        </div>
+        <div class="ps-1 mt-1">
+        <a
+          class="btn btn-sm btn-danger "
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+          href="/admin/login/logout"
+        >Sign Out
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a></p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+       <table class="table ms-4 table-hover">
+  <thead>
+    <tr>
+      <th scope="col ">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Subtitle</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody >
+    {{#each exhibitions }}
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td class="col-sm-1">{{title}}</td>
+      <td class="col-sm-2">{{subtitle}}</td>
+      <td class="col-sm-4">{{description}}</td>
+      <td class="col-sm-1">{{{img}}}</td>
+      <td class="text-left">
+        <a class="btn btn-sm btn-secondary" href="/admin/exhibitions/update/{{id}}">
+        <i class="fa fa-pencil" aria-hidden="true"></i></a>
+        <a class="btn btn-sm btn-secondary" href="/admin/exhibitions/delete/{{id}}">
+        <i class="fa fa-trash" aria-hidden="true"></i></a>
+        </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table> 
+    </div>
+  </div>

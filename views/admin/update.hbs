@@ -1,0 +1,78 @@
+<div class="form-container d-flex flex-column">
+  <h4 class="text-center mt-3">Update Exhibition</h4>
+  <form
+    method="post"
+    action="/admin/exhibitions/update"
+    enctype="multipart/form-data"
+  >
+    <input type="hidden" value="{{exhibition.id}}" name="id" />
+
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="title" class="col-1 col-form-label">Exhibition Title</label>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          placeholder="Philip Guston Now"
+          value="{{exhibition.title}}"
+        />
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="subtitle" class="col-1 col-form-label">Exhibition Dates</label>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          id="subtitle"
+          name="subtitle"
+          placeholder="March 2 – August 27, 2023"
+          value="{{exhibition.subtitle}}"
+        />
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label for="description" class="col-1 col-form-label">Exhibition
+        Description</label>
+      <div class="col-2">
+        <textarea
+          type="text"
+          class="form-control"
+          id="description"
+          name="description"
+          placeholder="Description"
+        >{{exhibition.description}}</textarea>
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label class="col-1 col-form-label">Image: </label>
+      <div class="col-2">
+        <input type="file" name="image" id="image" />
+      </div>
+    </div>
+    <div class="row m-3 d-flex justify-content-center">
+      <label class="col-3 col-form-label"><input
+          type="checkbox"
+          name="img_delete"
+          id="img_delete"
+          value="1"
+        />
+        Do yo want to delete the actual image?
+      </label>
+      <input type="hidden" name="img_original" value="{{exhibition.img_id}}" />
+    </div>
+    <div class="m-3"></div>
+    <div class="text-center">
+      <button
+        type="submit"
+        class="btn btn-secondary col-1 row m-3"
+      >Update</button>
+    </div>
+  </form>
+  {{#if error}}
+    <h5>{{message}}</h5>
+  {{/if}}
+
+</div>
