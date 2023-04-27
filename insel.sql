@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 23, 2023 at 10:01 PM
+-- Generation Time: Apr 27, 2023 at 12:14 AM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -31,17 +31,19 @@ CREATE TABLE `exhibitions` (
   `id` int(11) NOT NULL,
   `title` varchar(250) NOT NULL,
   `subtitle` text NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `img_id` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `exhibitions`
 --
 
-INSERT INTO `exhibitions` (`id`, `title`, `subtitle`, `description`) VALUES
-(1, 'Philip Guston Now', 'March 2 – August 27, 2023', 'Philip Guston Now charts the 50-year career of one of America’s most influential modern artists through more than 150 paintings and drawings. Guston’s story is one of epic change—of artistic styles, from muralism to abstract expressionism to figuration, of degrees of political and social involvement, and of levels of personal confession in his work. Renowned in his time and in ours, Guston’s work continues to resonate, attract, and provoke, raising crucial questions about the relationship of art to beauty and brutality, freedom and doubt, politics and the imagination.'),
-(2, 'This Is Britain: Photographs from the 1970s and 1980s', 'January 29 – June 11, 2023 ', 'Britain experienced profound changes in the 1970s and 1980s, when it was racked by deindustrialization, urban uprisings, the controversial policies of Prime Minister Margaret Thatcher, and the Troubles in Northern Ireland. Photography became a central form of creative expression during this period, supported and disseminated through new schools, galleries, artists’ collectives, magazines, and government funding.\r\n\r\nThis Is Britain brings together the work of a generation of photographers who were commenting on the deep unrest of these pivotal decades. Vanley Burke, Pogus Caesar, Anna Fox, Paul Graham, Sunil Gupta, Chris Killip, Sirkka-Liisa Konttinen, Martin Parr, and others pictured communities, traditions, and landscapes affected by Britain’s shifting social and economic realities. Together, they photographed a nation redefining what it meant to be British and, ultimately, modern.'),
-(4, 'Test2', 'Test2', 'Test2');
+INSERT INTO `exhibitions` (`id`, `title`, `subtitle`, `description`, `img_id`) VALUES
+(1, 'Thinking in Colour - Philip Guston', 'From February 6th to March 24th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\r\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\r\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'v2w78gj6u0iqz3efaebd'),
+(2, 'Road to Kyoto - Naomi Okubo', 'From April 3th to May 12th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\r\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\r\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'gnkmlcv139fs83jnvrft'),
+(4, 'Exspiravit - Decorum', 'From May 15th to June 30th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\r\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\r\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'qcllszy4l4bxc7kcnotq'),
+(6, 'Test3', 'Test3', 'Test3', 'qdujuafnvxzxhsji0ick');
 
 -- --------------------------------------------------------
 
@@ -62,8 +64,8 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id_message`, `name`, `email`, `message`, `answer`) VALUES
-(1, 'test1', 'test1', 'test1', ''),
-(2, 'test2', 'test2', 'test2', '');
+(1, 'test1', 'test1', 'test1', 'test1'),
+(3, 'test2', 'test2', 'test2', '');
 
 -- --------------------------------------------------------
 
@@ -115,13 +117,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `exhibitions`
 --
 ALTER TABLE `exhibitions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
