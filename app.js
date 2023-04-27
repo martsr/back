@@ -4,6 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var fileUpload = require("express-fileupload");
+var cors = require("cors");
 
 require("dotenv").config();
 var session = require("express-session");
@@ -14,6 +15,8 @@ var usersRouter = require("./routes/users");
 var loginRouter = require("./routes/admin/login");
 var adminRouter = require("./routes/admin/exhibitions");
 var messageRouter = require("./routes/admin/messages");
+var apiRouter = require("./routes/api");
+
 var app = express();
 
 // view engine setup
@@ -59,6 +62,7 @@ app.use("/users", usersRouter);
 app.use("/admin/login", loginRouter);
 app.use("/admin/exhibitions", secured, adminRouter);
 app.use("/admin/messages", secured, messageRouter);
+app.use("/api", cors(), apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
