@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 27, 2023 at 12:14 AM
+-- Generation Time: May 12, 2023 at 08:48 PM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -40,10 +40,10 @@ CREATE TABLE `exhibitions` (
 --
 
 INSERT INTO `exhibitions` (`id`, `title`, `subtitle`, `description`, `img_id`) VALUES
-(1, 'Thinking in Colour - Philip Guston', 'From February 6th to March 24th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\r\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\r\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'v2w78gj6u0iqz3efaebd'),
-(2, 'Road to Kyoto - Naomi Okubo', 'From April 3th to May 12th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\r\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\r\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'gnkmlcv139fs83jnvrft'),
 (4, 'Exspiravit - Decorum', 'From May 15th to June 30th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\r\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\r\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'qcllszy4l4bxc7kcnotq'),
-(6, 'Test3', 'Test3', 'Test3', 'qdujuafnvxzxhsji0ick');
+(5, 'Exspiravit - Decorum', 'From May 15th to June 30th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. // Exercitationem minima corporis aperiam velit iste. Eligendi, // assumenda minima? Corporis quisquam aspernatur animi porro totam // magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'jf3fvyz8ch16rfovvkpb'),
+(6, 'Cobalt Peak', 'July 22 to August 30', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. // Exercitationem minima corporis aperiam velit iste. Eligendi, // assumenda minima? Corporis quisquam aspernatur animi porro totam // magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'iaostfvxpmcqusbz2yed'),
+(7, 'Thinking in Colour - Philip Guston', 'From February 6th to March 24th', 'Lorem ipsum dolor sit amet consectetur adipisicing elit.\\r\\n        //         Exercitationem minima corporis aperiam velit iste. Eligendi,\\r\\n        //         assumenda minima? Corporis quisquam aspernatur animi porro totam\\r\\n        //         magni! Saepe voluptates quidem consectetur! Enim, accusamus.', 'd1cyxtkspg4z04xyy46w');
 
 -- --------------------------------------------------------
 
@@ -64,8 +64,7 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id_message`, `name`, `email`, `message`, `answer`) VALUES
-(1, 'test1', 'test1', 'test1', 'test1'),
-(3, 'test2', 'test2', 'test2', '');
+(1, 'test1', 'test1', 'test1', 'respuesta 2');
 
 -- --------------------------------------------------------
 
@@ -117,13 +116,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `exhibitions`
 --
 ALTER TABLE `exhibitions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_message` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
